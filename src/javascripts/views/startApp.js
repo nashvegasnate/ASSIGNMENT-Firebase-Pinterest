@@ -3,8 +3,8 @@
 import logoutButton from '../components/logoutButton';
 import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
-import domEvents from '../components/events/domEvents';
-import navigationEvents from '../components/events/navigationEvents';
+import domEvents from '../events/domEvents';
+import navigationEvents from '../events/navigationEvents';
 // import { getBooks } from '../helpers/data/bookData';
 // import { showAuthors } from '../components/authors';
 // import { getAuthors } from '../helpers/data/authorData';
