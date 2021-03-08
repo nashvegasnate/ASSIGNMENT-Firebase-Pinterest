@@ -1,6 +1,6 @@
 // import { emptyBooks, showBooks } from '../components/books';
 // import home from '../components/home';
-import logoutButton from '../components/logoutButton';
+import logoutButton from '../components/buttons/logoutButton';
 import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
 import domEvents from '../events/domEvents';
