@@ -15,14 +15,14 @@ const startApp = (userObject) => {
   navBar(); // DYNAMICALLY ADD THE NAV
   logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
   navigationEvents(userObject.uid); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-  // put all books on the DOM
-  // getBooks(userObject.uid).then((booksArray) => {
-  //   if (booksArray.length) {
-  //     showBooks(booksArray);
-  //   } else {
-  //     emptyBooks();
-  //   }
-  // });
+  // put all pins on the DOM
+//   getPins(userObject.uid).then((pinssArray) => {
+//     if (pinssArray.length) {
+//       showPins(pinsArray);
+//     } else {
+//       emptyPins();
+//     }
+//   });
+// };
 };
-
 export default startApp;
