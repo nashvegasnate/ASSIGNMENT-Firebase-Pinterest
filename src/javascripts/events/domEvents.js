@@ -23,77 +23,72 @@ const domEvents = (uid) => {
     }
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A BOOK
-    if (e.target.id.includes('add-book-btn')) {
-      console.warn('CLICKED ADD BOOK BUTTON', e.target.id);
+    if (e.target.id.includes('add-pin-btn')) {
+      console.warn('CLICKED ADD PIN BUTTON', e.target.id);
       addBookForm();
     }
 
     // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOOK
-    if (e.target.id.includes('submit-book')) {
+    if (e.target.id.includes('submit-pin')) {
       e.preventDefault();
-      const bookObject = {
-        title: document.querySelector('#title').value,
-        image: document.querySelector('#image').value,
-        price: document.querySelector('#price').value,
-        sale: document.querySelector('#sale').checked,
-        author_id: document.querySelector('#author').value,
+      const pinObject = {
+        pinTitle: document.querySelector('#title').value,
+        pin_img: document.querySelector('#image').value,
+        board_id: document.querySelector('#board').value,
+        description: document.querySelector('#description').value,
         uid: firebase.auth().currentUser.uid
       };
 
-      createBook(bookObject, uid).then((booksArray) => showBooks(booksArray));
+      createPin(pinObject, uid).then((pinssArray) => showPins(pinsArray));
     }
 
-    // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A BOOK
-    if (e.target.id.includes('edit-book-btn')) {
+    // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A PIN
+    if (e.target.id.includes('edit-pin-btn')) {
       const firebaseKey = e.target.id.split('--')[1];
-      formModal('Edit Book');
-      getSingleBook(firebaseKey).then((bookObject) => editBookForm(bookObject));
+      formModal('Edit Pin');
+      getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
     }
 
-    // CLICK EVENT FOR EDITING A BOOK
-    if (e.target.id.includes('update-book')) {
+    // CLICK EVENT FOR EDITING A PIN
+    if (e.target.id.includes('update-pin')) {
       const firebaseKey = e.target.id.split('--')[1];
       e.preventDefault();
-      const bookObject = {
-        title: document.querySelector('#title').value,
-        image: document.querySelector('#image').value,
-        price: document.querySelector('#price').value,
-        sale: document.querySelector('#sale').checked,
-        author_id: document.querySelector('#author').value,
+      const pinObject = {
+        pinTitle: document.querySelector('#title').value,
+        pin_img: document.querySelector('#image').value,
+        board_id: document.querySelector('#board').value,
+        description: document.querySelector('#description').value
       };
-      updateBook(firebaseKey, bookObject).then((booksArray) => showBooks(booksArray));
+      updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
 
       $('#formModal').modal('toggle');
     }
 
-    // ADD CLICK EVENT FOR DELETING AN AUTHOR
-    if (e.target.id.includes('delete-author')) {
+    // ADD CLICK EVENT FOR DELETING A BOARD
+    if (e.target.id.includes('delete-board')) {
       if (window.confirm('Want to delete?')) {
         const firebaseKey = e.target.id.split('--')[1];
-        deleteAuthor(firebaseKey).then((authorsArray) => showAuthors(authorsArray));
+        deleteBoard(firebaseKey).then((boardsArray) => showBoards(boardsArray));
       }
     }
 
-    // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING AN AUTHOR
-    if (e.target.id.includes('add-author')) {
-      console.warn('CLICKED ADD AUTHOR BUTTON', e.target.id);
-      addAuthorForm();
+    // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING A BOARD
+    if (e.target.id.includes('add-board')) {
+      console.warn('CLICKED ADD BOARD BUTTON', e.target.id);
+      addBoardForm();
     }
-    // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING AN AUTHOR
-    if (e.target.id.includes('submit-author')) {
+    // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOARD
+    if (e.target.id.includes('submit-board')) {
       e.preventDefault();
-      const authorObject = {
-        first_name: document.querySelector('#authorFirst').value,
-        last_name: document.querySelector('#authorLast').value,
-        // email: document.querySelector('#authorEmail').value,
-        // favorite: document.querySelector('#favoriteAuthor').checked,
+      const boardObject = {
+        board_img: document.querySelector('#board_img').value,
+        boardTitle: document.querySelector('#boardTitle').value,
         uid: firebase.auth().currentUser.uid
       };
-      createAuthor(authorObject, uid).then((authorsArray) => showAuthors(authorsArray));
+      createBoard(boardObject, uid).then((boardsArray) => showBoards(boardsArray));
     }
-  // ADD CLICK EVENT FOR EDITING AN AUTHOR
+  // ADD CLICK EVENT FOR EDITING A BOARD
   });
-};
 };
 
 export default domEvents;
