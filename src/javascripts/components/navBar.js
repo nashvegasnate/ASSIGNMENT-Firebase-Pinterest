@@ -5,11 +5,13 @@ const navBar = () => {
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="navbar-nav">
       <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Boards</a>
-      <a class="nav-link" href="#">Pins</a>
+      <a class="nav-link" href="#" id="boards">Boards</a>
+      <a class="nav-link" href="#" id="pins">Pins</a>
     </div>
   </div>
-  <div id="login-form-container"></div>
+  <div id="login-form-container">
+  <div id="logout-button"></div>
+  </div>
 </nav>`;
 };
 

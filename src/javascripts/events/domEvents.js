@@ -1,34 +1,35 @@
-// import firebase from 'firebase/app';
-// import 'firebase/auth';
-// import { showPins } from '../components/pins';
-// import addPinForm from '../components/forms/addPinForm';
-// import {
-//   createPin, deletePin, getSinglePin, updatePin
-// } from '../helpers/data/pinData';
-// import addBoardForm from '../components/forms/addBoardForm';
-// import { showBoards } from '../components/boards';
-// import { createBoard, deleteBoard } from '../helpers/data/boardData';
-// import formModal from '../components/forms/formModal';
-// import editPinForm from '../components/forms/editPinForm';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+import { showPins } from '../components/pins';
+import addPinForm from '../components/forms/addPinForm';
+import {
+  createPin, deletePin, updatePin, getSinglePin
+} from '../helpers/data/pinData';
+import addBoardForm from '../components/forms/addBoardForm';
+import { showBoards } from '../components/boards';
+import { createBoard, deleteBoard } from '../helpers/data/boardData';
+import formModal from '../components/forms/formModal';
+import editPinForm from '../components/forms/editPinForm';
 
 const domEvents = (uid) => {
   console.warn(uid);
   document.querySelector('body').addEventListener('click', (e) => {
     // CLICK EVENT FOR DELETING A PIN
     if (e.target.id.includes('delete-pin')) {
+      // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const firebaseKey = e.target.id.split('--')[1];
-        deletePin(firebaseKey).then((pinssArray) => showPins(pinsArray));
+        deletePin(firebaseKey).then((pinsArray) => showPins(pinsArray));
       }
     }
 
-    // CLICK EVENT FOR SHOWING FORM FOR ADDING A BOOK
+    // CLICK EVENT FOR SHOWING FORM FOR ADDING A PIN
     if (e.target.id.includes('add-pin-btn')) {
       console.warn('CLICKED ADD PIN BUTTON', e.target.id);
-      addBookForm();
+      addPinForm();
     }
 
-    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A BOOK
+    // CLICK EVENT FOR SUBMITTING FORM FOR ADDING A PIN
     if (e.target.id.includes('submit-pin')) {
       e.preventDefault();
       const pinObject = {
@@ -39,7 +40,7 @@ const domEvents = (uid) => {
         uid: firebase.auth().currentUser.uid
       };
 
-      createPin(pinObject, uid).then((pinssArray) => showPins(pinsArray));
+      createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
     }
 
     // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A PIN
@@ -66,6 +67,7 @@ const domEvents = (uid) => {
 
     // ADD CLICK EVENT FOR DELETING A BOARD
     if (e.target.id.includes('delete-board')) {
+      // eslint-disable-next-line no-alert
       if (window.confirm('Want to delete?')) {
         const firebaseKey = e.target.id.split('--')[1];
         deleteBoard(firebaseKey).then((boardsArray) => showBoards(boardsArray));
@@ -73,7 +75,7 @@ const domEvents = (uid) => {
     }
 
     // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING A BOARD
-    if (e.target.id.includes('add-board')) {
+    if (e.target.id.includes('add-board-btn')) {
       console.warn('CLICKED ADD BOARD BUTTON', e.target.id);
       addBoardForm();
     }
