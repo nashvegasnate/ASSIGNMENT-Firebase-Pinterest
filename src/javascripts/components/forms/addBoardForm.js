@@ -2,7 +2,7 @@ import selectBoard from './selectBoard';
 
 const addBoardForm = () => {
   document.querySelector('#base').innerHTML = '';
-  document.querySelector('#add-board-btn').innerHTML = '';
+  document.querySelector('#add-button').innerHTML = '';
   document.querySelector('#form-container').innerHTML = `
     <form id="submit-board-form" class="mb-4">
       <div class="form-group">
