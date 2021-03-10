@@ -1,11 +1,11 @@
 import { emptyBoards, showBoards } from '../components/boards';
-import signOut from '../helpers/auth/signOut';
+// import signOut from '../helpers/auth/signOut';
 import { getBoards } from '../helpers/data/boardData';
 
 const navigationEvents = (uid) => {
-  // console.warn(uid);
+  console.warn(uid);
   // LOGOUT BUTTON
-  document.querySelector('#logout-button').addEventListener('click', signOut);
+  // document.querySelector('#logoutButton').addEventListener('click', signOut);
 
   document.querySelector('#boards').addEventListener('click', () => {
     getBoards(uid).then((boardsArray) => {

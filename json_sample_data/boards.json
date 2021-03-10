@@ -2,31 +2,37 @@
   "-MVIg_EnvOQ7CWS5iUMo": {
     "firebaseKey": "-MVIg_EnvOQ7CWS5iUMo",
     "board_img":"http://dummyimage.com/219x163.png/ff4444/ffffff",
-    "boardTitle":"Outdoors"
+    "boardTitle":"Outdoors",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_EpktX0wujjaX-D": {
     "firebaseKey": "-MVIg_EpktX0wujjaX-D",
     "board_img":"http://dummyimage.com/129x239.bmp/cc0000/ffffff",
-    "boardTitle":"Home"
+    "boardTitle":"Home",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Eqo-LTI7HXuGZo": {
     "firebaseKey": "-MVIg_Eqo-LTI7HXuGZo",
     "board_img":"http://dummyimage.com/146x179.png/cc0000/ffffff",
-    "boardTitle":"Music"
+    "boardTitle":"Music",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Es_Vp4Tpv5FtPs": {
     "firebaseKey": "-MVIg_Es_Vp4Tpv5FtPs",
     "board_img":"http://dummyimage.com/204x202.jpg/cc0000/ffffff",
-    "boardTitle":"Garden"
+    "boardTitle":"Garden",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_EvOSwXlrwg57zj": {
     "firebaseKey": "-MVIg_EvOSwXlrwg57zj",
     "board_img":"http://dummyimage.com/199x228.png/ff4444/ffffff",
-    "boardTitle":"Sports"
+    "boardTitle":"Sports",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Ex2eSdUqkmPyTA": {
     "firebaseKey": "-MVIg_Ex2eSdUqkmPyTA",
     "board_img":"http://dummyimage.com/102x102.png/cc0000/ffffff",
-    "boardTitle":"Cars"
+    "boardTitle":"Cars",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   }
 }

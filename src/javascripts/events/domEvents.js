@@ -36,7 +36,6 @@ const domEvents = (uid) => {
         pinTitle: document.querySelector('#title').value,
         pin_img: document.querySelector('#image').value,
         board_id: document.querySelector('#board').value,
-        description: document.querySelector('#description').value,
         uid: firebase.auth().currentUser.uid
       };
 
@@ -58,7 +57,6 @@ const domEvents = (uid) => {
         pinTitle: document.querySelector('#title').value,
         pin_img: document.querySelector('#image').value,
         board_id: document.querySelector('#board').value,
-        description: document.querySelector('#description').value
       };
       updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
 

@@ -14,8 +14,7 @@ const startApp = (userObject) => {
   domEvents(userObject.uid); // ADD THE EVENT LISTENTERS TO THE DOM
   navBar(); // DYNAMICALLY ADD THE NAV
   navigationEvents(userObject.uid); // ATTACH THE EVENT LISTENERS TO THE NAVBAR
-  logoutButton(); // ADD THE LOGOUT BUTTON COMPONENT
-
+  logoutButton();
   home();
   // put all boards on the DOM
   getBoards(userObject.uid).then((boardsArray) => {
