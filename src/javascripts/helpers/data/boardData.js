@@ -1,3 +1,4 @@
+import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from '../auth/apiKeys';
 // API CALLS FOR BOARDS
@@ -30,9 +31,9 @@ const createBoard = (boardObject, uid) => new Promise((resolve, reject) => {
 });
 
 // DELETE BOARD
-const deleteBoard = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/boards/${firebaseKey}.json`)
-    .then(() => getBoards().then((boardsArray) => resolve(boardsArray)))
+    .then(() => getBoards(uid).then((boardsArray) => resolve(boardsArray)))
     .catch((error) => reject(error));
 });
 // UPDATE BOARDS

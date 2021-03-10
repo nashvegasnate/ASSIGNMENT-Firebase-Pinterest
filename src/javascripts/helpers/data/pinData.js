@@ -13,7 +13,9 @@ const getPins = (uid) => new Promise((resolve, reject) => {
       const pinsArray = Object.values(response.data);
       if (response.data) {
         resolve(pinsArray);
-      } else resolve([]);
+      } else {
+        resolve([]);
+      }
     }).catch((error) => reject(error));
 });
 

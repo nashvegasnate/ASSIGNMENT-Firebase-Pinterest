@@ -7,13 +7,19 @@ import {
 } from '../helpers/data/pinData';
 import addBoardForm from '../components/forms/addBoardForm';
 import { showBoards } from '../components/boards';
-import { createBoard, deleteBoard } from '../helpers/data/boardData';
+import { createBoard, deleteBoard, getBoards } from '../helpers/data/boardData';
 import formModal from '../components/forms/formModal';
 import editPinForm from '../components/forms/editPinForm';
 
 const domEvents = (uid) => {
   console.warn(uid);
   document.querySelector('body').addEventListener('click', (e) => {
+    if (e.target.id.includes('boards-btn')) {
+      e.preventDefault();
+      document.querySelector('#form-container').innerHTML = '';
+      document.querySelector('#base').innerHTML = '';
+      getBoards(uid).then((boardsArray) => showBoards(boardsArray));
+    }
     // CLICK EVENT FOR DELETING A PIN
     if (e.target.id.includes('delete-pin')) {
       // eslint-disable-next-line no-alert

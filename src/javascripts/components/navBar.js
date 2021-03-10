@@ -4,7 +4,7 @@ const navBar = () => {
   </a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <div class="navbar-nav">
-      <a class="nav-link" href="#" id="boards">Boards</a>
+      <a class="nav-link" href="#" id="boards-btn">Boards</a>
     </div>
   </div>
   <div id="logout-form-container">

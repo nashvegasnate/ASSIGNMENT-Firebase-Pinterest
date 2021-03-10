@@ -12,13 +12,11 @@ const showBoards = (array) => {
     <button class="btn btn-danger" id="delete-board--${item.firebaseKey}">Delete Board</button>
     </div>
   </div>`;
-    document.querySelector('#base').innerHTML += `${item}`;
+    // document.querySelector('#base').innerHTML += `${item}`;
   });
 };
 
 const emptyBoards = () => {
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-board-btn">Add A Board</button>';
-  document.querySelector('#form-container').innerHTML = '';
   document.querySelector('#base').innerHTML = '<h1>No Boards</h1>';
 };
 
