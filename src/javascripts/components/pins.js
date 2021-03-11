@@ -3,13 +3,13 @@ const showPins = (array) => {
   document.querySelector('#base').innerHTML = '';
   document.querySelector('#form-container').innerHTML = '';
 
-  array.foreach((item) => {
+  array.forEach((item) => {
     document.querySelector('#base').innerHTML += `<div class="card">
-    <img class="card-img-top" src=${item.pin_img} style="height: 400px;">
+    <img class="card-img-top" src=${item.pin_img} alt=${item.pinTitle} style="height: 400px;">
     <div class="card-body" style="height: 180px;">
     <h5 class="card-title">${item.pinTitle}</h5>
-    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-pin-btn--${item.firebaseKey}">Edit Pin</button>
-    <button class="btn btn-danger" id="delete-pin--${item.firebaseKey}">Delete Pin</button>
+    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-pin-btn^^${item.firebaseKey}">Edit Pin</button>
+    <button class="btn btn-danger" id="delete-pin^^${item.firebaseKey}^^${item.board_id}">Delete Pin</button>
     </div>
   </div>`;
   });

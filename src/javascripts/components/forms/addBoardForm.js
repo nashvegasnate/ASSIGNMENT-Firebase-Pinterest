@@ -1,4 +1,4 @@
-import selectBoard from './selectBoard';
+// import selectBoard from './selectBoard';
 
 const addBoardForm = () => {
   document.querySelector('#base').innerHTML = '';
@@ -7,7 +7,7 @@ const addBoardForm = () => {
     <form id="submit-board-form" class="mb-4">
       <div class="form-group">
         <label for="boardTitle">Board Title</label>
-        <input type="text" class="form-control" id="boardTitle" aria-describedby="boardTitle" placeholder="Enter Board Title" required>
+        <input type="text" class="form-control" id="title" aria-describedby="boardTitle" placeholder="Enter Board Title" required>
       </div>
       <div class="form-group">
         <label for="image">Image URL</label>
@@ -15,7 +15,7 @@ const addBoardForm = () => {
       </div>
       <button type="submit" id="submit-board" class="btn btn-primary">Submit Board</button>
     </form>`;
-  selectBoard();
+  // selectBoard();
 };
 
 export default addBoardForm;

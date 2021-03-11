@@ -1,5 +1,6 @@
 import 'firebase/auth';
 import axios from 'axios';
+import firebase from 'firebase/app';
 import firebaseConfig from '../auth/apiKeys';
 // API CALLS FOR PINS
 
@@ -7,7 +8,7 @@ const dbUrl = firebaseConfig.databaseURL;
 
 // GET PINS
 const getBoardPins = (firebaseKey) => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/pins.json?orderBy="uid"&equalTo="${firebaseKey}"`)
+  axios.get(`${dbUrl}/pins.json?orderBy="board_id"&equalTo="${firebaseKey}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
@@ -31,12 +32,12 @@ const createPin = (pinObject) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
-// const updatePin = (firebaseKey, pinObject) => new Promise((resolve, reject) => {
-//   axios.patch(`${dbUrl}/pins/${firebaseKey}.json`, pinObject)
-//     .then(() => getPins(firebase.auth().currentUser.uid)).then((pinsArray) => resolve(pinsArray))
-//     .catch((error) => reject(error));
-// });
+const updatePin = (firebaseKey, pinObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/pins/${firebaseKey}.json`, pinObject)
+    .then(() => getBoardPins(firebase.auth().currentUser.uid)).then((pinsArray) => resolve(pinsArray))
+    .catch((error) => reject(error));
+});
 
 export {
-  createPin, deletePin, getBoardPins
+  createPin, deletePin, getBoardPins, updatePin
 };
