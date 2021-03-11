@@ -3,13 +3,13 @@ import 'firebase/auth';
 import { showPins } from '../components/pins';
 import addPinForm from '../components/forms/addPinForm';
 import {
-  createPin, deletePin, updatePin, getSinglePin
+  createPin, deletePin, getBoardPins
 } from '../helpers/data/pinData';
 import addBoardForm from '../components/forms/addBoardForm';
 import { showBoards } from '../components/boards';
 import { createBoard, deleteBoard, getBoards } from '../helpers/data/boardData';
-import formModal from '../components/forms/formModal';
-import editPinForm from '../components/forms/editPinForm';
+// import formModal from '../components/forms/formModal';
+// import editPinForm from '../components/forms/editPinForm';
 
 const domEvents = (uid) => {
   console.warn(uid);
@@ -47,27 +47,33 @@ const domEvents = (uid) => {
 
       createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
     }
-
-    // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A PIN
-    if (e.target.id.includes('edit-pin-btn')) {
-      const firebaseKey = e.target.id.split('--')[1];
-      formModal('Edit Pin');
-      getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
-    }
-
-    // CLICK EVENT FOR EDITING A PIN
-    if (e.target.id.includes('update-pin')) {
-      const firebaseKey = e.target.id.split('--')[1];
+    // SHOW PINS
+    if (e.target.id.includes('show-pins-btn')) {
       e.preventDefault();
-      const pinObject = {
-        pinTitle: document.querySelector('#title').value,
-        pin_img: document.querySelector('#image').value,
-        board_id: document.querySelector('#board').value,
-      };
-      updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
-
-      $('#formModal').modal('toggle');
+      const firebaseKey = e.target.id.split('--')[1];
+      getBoardPins(firebaseKey).then((pinsArray) => showPins(pinsArray));
     }
+
+    // // CLICK EVENT FOR SHOWING MODAL FORM FOR ADDING A PIN
+    // if (e.target.id.includes('edit-pin-btn')) {
+    //   const firebaseKey = e.target.id.split('--')[1];
+    //   formModal('Edit Pin');
+    //   getSinglePin(firebaseKey).then((pinObject) => editPinForm(pinObject));
+    // }
+
+    // // CLICK EVENT FOR EDITING A PIN
+    // if (e.target.id.includes('update-pin')) {
+    //   const firebaseKey = e.target.id.split('--')[1];
+    //   e.preventDefault();
+    //   const pinObject = {
+    //     pinTitle: document.querySelector('#title').value,
+    //     pin_img: document.querySelector('#image').value,
+    //     board_id: document.querySelector('#board').value,
+    //   };
+    //   updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
+
+    //   $('#formModal').modal('toggle');
+    // }
 
     // ADD CLICK EVENT FOR DELETING A BOARD
     if (e.target.id.includes('delete-board')) {

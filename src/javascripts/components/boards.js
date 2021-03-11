@@ -8,11 +8,11 @@ const showBoards = (array) => {
     <img class="card-img-top" src=${item.board_img} style="height: 400px;">
     <div class="card-body" style="height: 180px;">
     <h5 class="card-title">${item.boardTitle}</h5>
-    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-board-btn--${item.firebaseKey}">Edit Board</button>
+    <hr>
+    <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="show-pins-btn--${item.firebaseKey}">Show Pins</button>
     <button class="btn btn-danger" id="delete-board--${item.firebaseKey}">Delete Board</button>
     </div>
   </div>`;
-    // document.querySelector('#base').innerHTML += `${item}`;
   });
 };
 

@@ -1,20 +1,14 @@
 import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
 import domEvents from '../events/domEvents';
-import { showBoards, emptyBoards } from '../components/boards';
+import { showBoards } from '../components/boards';
 import { getBoards } from '../helpers/data/boardData';
 
 const startApp = (userObject) => {
   domBuilder();
   navBar();
   domEvents(userObject.uid);
-  getBoards(userObject.uid).then((boardsArray) => {
-    if (boardsArray.length) {
-      showBoards(boardsArray);
-    } else {
-      emptyBoards();
-    }
-  });
+  getBoards(userObject.uid).then((boardsArray) => showBoards(boardsArray));
 };
 
 export default startApp;
