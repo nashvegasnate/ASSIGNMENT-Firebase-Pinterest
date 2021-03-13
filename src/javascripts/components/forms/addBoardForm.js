@@ -1,5 +1,4 @@
 // import selectBoard from './selectBoard';
-
 const addBoardForm = () => {
   document.querySelector('#base').innerHTML = '';
   document.querySelector('#add-button').innerHTML = '';

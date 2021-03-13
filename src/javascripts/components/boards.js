@@ -5,12 +5,12 @@ const showBoards = (array) => {
 
   array.forEach((item) => {
     document.querySelector('#base').innerHTML += `<div class="card">
-    <img class="card-img-top" src=${item.board_img} style="height: 400px;">
-    <div class="card-body" style="height: 180px;">
+    <img class="card-img-top" src=${item.board_img} style="height: 300px;">
+    <div class="card-body" style="height: 150px;">
     <h5 class="card-title">${item.boardTitle}</h5>
     <hr>
     <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="show-pins-btn^^${item.firebaseKey}">Show Pins</button>
-    <button class="btn btn-danger" id="delete-board^^${item.firebaseKey}">Delete Board</button>
+    <button class="btn btn-danger" id="delete-board--${item.firebaseKey}">Delete Board</button>
     </div>
   </div>`;
   });
