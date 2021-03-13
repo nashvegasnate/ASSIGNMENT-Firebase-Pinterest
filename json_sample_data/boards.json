@@ -1,32 +1,38 @@
 {
   "-MVIg_EnvOQ7CWS5iUMo": {
     "firebaseKey": "-MVIg_EnvOQ7CWS5iUMo",
-    "board_img":"http://dummyimage.com/219x163.png/ff4444/ffffff",
-    "title":"Outdoors"
+    "board_img":"https://images.unsplash.com/photo-1551632811-561732d1e306?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8aGlraW5nfGVufDB8fDB8&ixlib=rb-1.2.1&w=1000&q=80",
+    "boardTitle":"Outdoors",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_EpktX0wujjaX-D": {
     "firebaseKey": "-MVIg_EpktX0wujjaX-D",
-    "board_img":"http://dummyimage.com/129x239.bmp/cc0000/ffffff",
-    "title":"Home"
+    "board_img":"https://media.istockphoto.com/photos/beautiful-luxury-home-exterior-at-twilight-picture-id1026205392?k=6&m=1026205392&s=612x612&w=0&h=pe0Pqbm7GKHl7cmEjf9Drc7Fp-JwJ6aTywsGfm5eQm4=",
+    "boardTitle":"Home",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Eqo-LTI7HXuGZo": {
     "firebaseKey": "-MVIg_Eqo-LTI7HXuGZo",
-    "board_img":"http://dummyimage.com/146x179.png/cc0000/ffffff",
-    "title":"Music"
+    "board_img":"https://media.istockphoto.com/vectors/funky-drawn-music-turntable-vector-id1088179848",
+    "boardTitle":"Music",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Es_Vp4Tpv5FtPs": {
     "firebaseKey": "-MVIg_Es_Vp4Tpv5FtPs",
-    "board_img":"http://dummyimage.com/204x202.jpg/cc0000/ffffff",
-    "title":"Garden"
+    "board_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-QbQbgBQb7i9wkH8Nnv3Qgt83JbxRUvTHjg&usqp=CAU",
+    "boardTitle":"Garden",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_EvOSwXlrwg57zj": {
     "firebaseKey": "-MVIg_EvOSwXlrwg57zj",
-    "board_img":"http://dummyimage.com/199x228.png/ff4444/ffffff",
-    "title":"Sports"
+    "board_img":"https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/7/2015/11/GettyImages-56090796.jpg",
+    "boardTitle":"Sports",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   },
   "-MVIg_Ex2eSdUqkmPyTA": {
     "firebaseKey": "-MVIg_Ex2eSdUqkmPyTA",
-    "board_img":"http://dummyimage.com/102x102.png/cc0000/ffffff",
-    "title":"Cars"
+    "board_img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4Fs1gdU0doUfWZJ4R5kxU1K9YjsPKHzdV1g&usqp=CAU",
+    "boardTitle":"Cars",
+    "uid": "alWyyPRA1sZlIjeEsqan3Eq48xL2"
   }
 }
