@@ -1,14 +1,14 @@
 import { showPins } from '../components/pins';
+import addPinForm from '../components/forms/addPinForm';
 import {
   createPin, deletePin, getBoardPins, getSinglePin, updatePin
 } from '../helpers/data/pinData';
+import deleteBoardPins from '../helpers/data/boardPinsData';
 import addBoardForm from '../components/forms/addBoardForm';
 import { showBoards } from '../components/boards';
 import { createBoard, getBoards } from '../helpers/data/boardData';
-import addPinForm from '../components/forms/addPinForm';
-import deleteBoardPins from '../helpers/data/boardPinsData';
-import editPinForm from '../components/forms/editPinForm';
 import formModal from '../components/forms/formModal';
+import editPinForm from '../components/forms/editPinForm';
 
 const domEvents = (uid) => {
   // SHOW BOARDS
