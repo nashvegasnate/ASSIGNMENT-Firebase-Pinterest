@@ -10,7 +10,7 @@ const showBoards = (array) => {
     <h5 class="card-title">${item.boardTitle}</h5>
     <hr>
     <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="show-pins-btn^^${item.firebaseKey}">Show Pins</button>
-    <button class="btn btn-danger" id="delete-board--${item.firebaseKey}">Delete Board</button>
+    <button class="btn btn-danger" id="delete-board^^${item.firebaseKey}">Delete Board</button>
     </div>
   </div>`;
   });

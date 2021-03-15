@@ -32,7 +32,7 @@ const domEvents = (uid) => {
     if (e.target.id.includes('delete-board')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to Delete Board and Pins?')) {
-        const boardId = e.target.id.split('--')[1];
+        const boardId = e.target.id.split('^^')[1];
         deleteBoardPins(boardId, uid).then((boardsArray) => showBoards(boardsArray));
         console.warn(boardId);
       }
@@ -86,7 +86,7 @@ const domEvents = (uid) => {
     // if (e.target.id.includes('delete-board')) {
     //   // eslint-disable-next-line no-alert
     //   if (window.confirm('Want to delete?')) {
-    //     const firebaseKey = e.target.id.split('--')[1];
+    //     const firebaseKey = e.target.id.split('^^')[1];
     //     deleteBoardPins(firebaseKey).then((boardsArray) => showBoards(boardsArray));
     //   }
     // }

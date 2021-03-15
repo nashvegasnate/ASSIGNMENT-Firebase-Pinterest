@@ -6,8 +6,8 @@ import { getBoards } from '../helpers/data/boardData';
 
 const startApp = (userObject) => {
   domBuilder();
-  navBar();
   domEvents(userObject.uid);
+  navBar();
   getBoards(userObject.uid).then((boardsArray) => {
     if (boardsArray.length) {
       showBoards(boardsArray);
