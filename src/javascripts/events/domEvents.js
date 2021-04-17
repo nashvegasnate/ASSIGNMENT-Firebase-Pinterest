@@ -1,14 +1,14 @@
 import { showPins } from '../components/pins';
+import addPinForm from '../components/forms/addPinForm';
 import {
   createPin, deletePin, getBoardPins, getSinglePin, updatePin
 } from '../helpers/data/pinData';
+import deleteBoardPins from '../helpers/data/boardPinsData';
 import addBoardForm from '../components/forms/addBoardForm';
 import { showBoards } from '../components/boards';
 import { createBoard, getBoards } from '../helpers/data/boardData';
-import addPinForm from '../components/forms/addPinForm';
-import deleteBoardPins from '../helpers/data/boardPinsData';
-import editPinForm from '../components/forms/editPinForm';
 import formModal from '../components/forms/formModal';
+import editPinForm from '../components/forms/editPinForm';
 
 const domEvents = (uid) => {
   // SHOW BOARDS
@@ -32,7 +32,7 @@ const domEvents = (uid) => {
     if (e.target.id.includes('delete-board')) {
       // eslint-disable-next-line no-alert
       if (window.confirm('Want to Delete Board and Pins?')) {
-        const boardId = e.target.id.split('--')[1];
+        const boardId = e.target.id.split('^^')[1];
         deleteBoardPins(boardId, uid).then((boardsArray) => showBoards(boardsArray));
         console.warn(boardId);
       }
@@ -86,7 +86,7 @@ const domEvents = (uid) => {
     // if (e.target.id.includes('delete-board')) {
     //   // eslint-disable-next-line no-alert
     //   if (window.confirm('Want to delete?')) {
-    //     const firebaseKey = e.target.id.split('--')[1];
+    //     const firebaseKey = e.target.id.split('^^')[1];
     //     deleteBoardPins(firebaseKey).then((boardsArray) => showBoards(boardsArray));
     //   }
     // }

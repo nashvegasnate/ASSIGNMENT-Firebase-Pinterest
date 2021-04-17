@@ -28,6 +28,10 @@ body {
   justify-content:space-around;
   width: 300px;
 }
+.card-img-top:hover {
+  transform: scale(1.1);
+  transition-duration: 500ms;
+}
 .card-img-top {
   border-radius: 25%;
 }
